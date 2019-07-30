@@ -24,4 +24,6 @@ urlpatterns = [
     url(r'^api/admin/user/', include("users.admin.urls"), name='admin-api'),
 
     url(r'^api/', include('users.urls'), name='user-api'),
+
+    url(r'^api/', include('profiles.urls'), name='profiles')
 ]

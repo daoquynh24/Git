@@ -15,9 +15,10 @@ from api import settings
 from base.models import AbstractUser
 from base.constants.common import AppConstants
 
+from core.models import TimestampedModel
 
-# Create your models here.
-class User(AbstractUser):
+
+class User(AbstractUser, TimestampedModel):
     # Base user already have: first_name, last_name, email, ...
     email = models.CharField(unique=True, max_length=200)
     phone = models.CharField(null=True, max_length=20, unique=True)
